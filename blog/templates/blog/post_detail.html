@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% comment %} {% load static %} {% endcomment %}
+
+{% block content %}
+
+
+
+    <div class="card-header mb-3 shadow" id='rcorners-main'>
+        <div class="video" id='rcorners-main'>
+            <iframe class="responsive-iframe" width="1280" height="720" src="https://www.youtube.com/embed/{{ object.yt_url }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="card-body">
+            <a><h5 class="card-title" >{{ object.title }}</h5></a>
+            <h5 ></h5>
+            <p class="card-text"><small class="text-muted">{{ object.date }}</small></p>
+        </div>
+        <div class="container">
+            {% if object.github %}
+                <a href="{{ object.github }}" target="_blank" type="button" class="btn btn-outline-dark mb-3">GitHubのコード配布ページ</a>
+            {% endif %}
+            {{ object.content|safe }}
+        </div>
+    </div>
+    
+{% endblock content %}
+
+    
