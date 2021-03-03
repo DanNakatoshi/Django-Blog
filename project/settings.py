@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'ckeditor',
-    'ckeditor_uploader',
+    # 'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -94,7 +94,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'
 
 TIME_ZONE = 'UTC'
 
@@ -120,19 +120,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 
 
-# CKEDITOR_CONFIGS = {
-#     'default': {
-#         'toolbar': 'full',
-#         'extraPlugins': ','.join(
-#             [
-#                'codesnippet',
-#             ], 
-        
-#         ),
-#     },
-#     'codeSnippet_theme': 'railscasts',
-# }
-
 CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
@@ -150,6 +137,7 @@ CKEDITOR_CONFIGS = {
         # uncomment to restrict only those languages
         'codeSnippet_languages': {
             'python': 'Python',
+            'javascript': 'JavaScript',
         },
         'toolbar': 'MyCustomToolbar',
         'extraPlugins': ','.join(

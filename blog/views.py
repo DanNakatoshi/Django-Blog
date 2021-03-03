@@ -11,5 +11,3 @@ class PostDetailView(DetailView):
     model = Post
     template_name = 'blog/post_detail.html'
     
-# def IndexView(request):
-#     return render(request, 'blog/blog-list.html')
